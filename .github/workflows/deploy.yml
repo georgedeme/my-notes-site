@@ -4,6 +4,14 @@ on:
   push:
     branches:
       - v5
+    paths:
+      - "content/**"
+      - "quartz.config.yaml"
+      - "quartz/**"
+      - "package.json"
+      - "package-lock.json"
+      - "quartz.lock.json"
+      - ".github/workflows/**"
  
 permissions:
   contents: read
