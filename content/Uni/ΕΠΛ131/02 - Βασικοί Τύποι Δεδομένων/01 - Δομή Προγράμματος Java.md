@@ -1,3 +1,9 @@
+---
+publish: true
+created: 2026-09-26T00:16:49.883Z
+modified: 2026-09-27T14:52:01.383Z
+---
+
 # 01 - Δομή Προγράμματος Java
 
 ➕ Συμπληρωματική σημείωση: ο «σκελετός» που εμφανίζεται σε **κάθε** παράδειγμα των διαφανειών, χωρίς να εξηγείται εκεί (η Ενότητα I δεν υπάρχει στο υλικό).
@@ -14,6 +20,7 @@ public class IntOps {                          // όνομα κλάσης = όν
 ```
 
 > [!note] Κανόνες
+>
 > - Ένα αρχείο `X.java` περιέχει την `public class X` – **ίδιο όνομα, ίδια κεφαλαία/μικρά**.
 > - Η εκτέλεση ξεκινά πάντα από την `public static void main(String[] args)`.
 > - Η Java είναι **case-sensitive**: `System` ≠ `system`, `Main` ≠ `main`.
@@ -27,6 +34,7 @@ public class IntOps {                          // όνομα κλάσης = όν
 | Εκτέλεση | `java IntOps 1234 99` | Η JVM τρέχει τη `main`· τα `1234`, `99` γίνονται `args[0]`, `args[1]` |
 
 > [!warning] Συχνά λάθη εκτέλεσης
+>
 > - `java IntOps.class` ✗ → γράφεις **το όνομα της κλάσης**, όχι του αρχείου.
 > - Άλλαξες τον κώδικα αλλά δεν ξανάτρεξες `javac` → τρέχει η **παλιά** έκδοση.
 > - **Ελληνικά σε Windows:** αν το αρχείο έχει ελληνικά (σε σχόλια, strings ή ονόματα μεταβλητών), το `javac` στα Windows μπορεί να βγάλει `unmappable character for encoding windows-1252`. Λύση: `javac -encoding UTF-8 IntOps.java`.
@@ -69,6 +77,7 @@ public class IntOps {                          // όνομα κλάσης = όν
 | `%n` ή `\n` | αλλαγή γραμμής | | |
 
 > [!warning] Παγίδες `printf`
+>
 > - `printf("%d", 3.5)` → **runtime** `IllegalFormatConversionException` (το `%d` θέλει ακέραιο).
 > - `printf("%.2f", 3)` → ίδιο πρόβλημα (το `3` είναι `int`). Γράψε `3.0`.
 
@@ -106,6 +115,7 @@ String line = in.nextLine();              // ολόκληρη γραμμή
 ## 7. Ονόματα (identifiers)
 
 > [!note] Κανόνες
+>
 > - Γράμματα, ψηφία, `_`, `$` · **δεν** ξεκινούν με ψηφίο · όχι δεσμευμένες λέξεις (`int`, `class`, `for`, `true`…).
 > - ✓ `count`, `x_big`, `START_CHAR`, `$tmp` · ✗ `2x`, `my-var`, `class`, `is prime`
 
@@ -129,6 +139,7 @@ String line = in.nextLine();              // ολόκληρη γραμμή
 ## Συχνά Λάθη
 
 > [!warning] Συχνά Λάθη
+>
 > - `public class Main` σε αρχείο `IntOps.java` → compile error.
 > - `System.out.printLn` / `printnl` → compile error (typo – υπάρχει και στις διαφάνειες III-31, III-46!).
 > - Ξεχνάς το `import java.util.Scanner;`.
